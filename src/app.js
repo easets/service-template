@@ -5,17 +5,15 @@ const etag = require('fastify-etag');
 const cookie = require('fastify-cookie');
 const axios = require('axios');
 const cors = require('fastify-cors');
-const stats = require('fastify-routes-stats');
 const bcryptLib = require('fastify-bcrypt');
 const jwtLib = require('fastify-jwt');
+const favicon = require('fastify-favicon');
+const healthCheck = require('fastify-healthcheck');
 const connect = require('./db/db');
 const routes = require('./routes/api');
 const config = require('./helpers/config');
 const authenticate = require('./plugins/authenticate');
 const cacheHelper = require('./plugins/cacheHelper');
-const favicon = require('fastify-favicon');
-
-const healthCheck = require('fastify-healthcheck');
 
 const build = async function builder() {
     const fastify = Fastify({
@@ -46,7 +44,6 @@ const build = async function builder() {
 
     fastify.decorate('axios', axios);
 
-    await fastify.register(stats, { log: false });
     await fastify.register(authenticate);
     await fastify.register(cacheHelper);
     fastify.register(favicon, { path: './' });

@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  {{template}}-service-mongo:
+  {{name}}-service-mongo:
     image: mongo:4.2
     ports:
       - "27017:27017"

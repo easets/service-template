@@ -1,5 +1,5 @@
 {
-  "name": "ease-{{template}}-service",
+  "name": "{{name}}-service",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,15 +14,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/easets/ease-{{template}}-service.git"
+    "url": "git+https://github.com/{{company}}/{{name}}-service.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "fastify",
+    "microservice",
+    "easets"
+  ],
+  "author": "dev@easets.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/easets/ease-{{template}}-service/issues"
+    "url": "https://github.com/{{company}}/{{name}}-service/issues"
   },
-  "homepage": "https://github.com/easets/ease-{{template}}-service#readme",
+  "homepage": "https://github.com/{{company}}/{{name}}-service#readme",
   "dependencies": {
     "ajv": "^6.12.5",
     "axios": "^0.21.1",

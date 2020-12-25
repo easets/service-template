@@ -5,7 +5,7 @@ module.exports = {
     exposeRoute: true,
     swagger: {
         info: {
-            title: 'ease {{template}} service api',
+            title: '{{name}} service api',
             description: 'docs',
             version: '0.1.0',
         },
@@ -20,7 +20,7 @@ module.exports = {
         consumes: ['application/json'],
         produces: ['application/json'],
         tags: [
-            { name: '{{template}}', description: '{{template}} API end-points' },
+            { name: '{{name}}', description: '{{name}} API end-points' },
         ],
     },
 };

@@ -1,6 +1,5 @@
-const { NotAuthorized } = require('../errors/errors');
-
 const fp = require('fastify-plugin');
+const { NotAuthorized } = require('../errors/errors');
 
 module.exports = fp((fastify, opts, done) => {
     fastify.decorate('authenticate', async (request, reply) => {
@@ -10,5 +9,5 @@ module.exports = fp((fastify, opts, done) => {
             reply.send(new NotAuthorized());
         }
     });
-    done()
+    done();
 });

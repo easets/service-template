@@ -1,4 +1,4 @@
-name: ease-{{template}}-service CI
+name: {{name}}-service CI
 
 on:
   push:

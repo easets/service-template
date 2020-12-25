@@ -5,11 +5,15 @@
     "indent": ["error", 4],
     "jest/no-disabled-tests": "warn",
     "no-underscore-dangle":  ["error", { "allow": ["_id"] }],
-    "brace-style": [2, "1tbs", { "allowSingleLine": false }]
+    "brace-style": [2, "1tbs", { "allowSingleLine": false }],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+
   },
   "plugins": ["jest"],
   "env": {
     "jest/globals": true
   }
+
+
 
 }
