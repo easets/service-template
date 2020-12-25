@@ -1,0 +1,15 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    // enable additional rules
+    "indent": ["error", 4],
+    "jest/no-disabled-tests": "warn",
+    "no-underscore-dangle":  ["error", { "allow": ["_id"] }],
+    "brace-style": [2, "1tbs", { "allowSingleLine": false }]
+  },
+  "plugins": ["jest"],
+  "env": {
+    "jest/globals": true
+  }
+
+}

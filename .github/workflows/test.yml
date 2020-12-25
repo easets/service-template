@@ -1,0 +1,36 @@
+name: ease-{{template}}-service CI
+
+on:
+  push:
+    branches:
+      - '**'
+    pull_request:
+      branches:
+        - '**'
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - run: npm ci
+
+      - name: Start MongoDB
+        uses: supercharge/mongodb-github-action@1.3.0
+        with:
+          mongodb-version: 4.2
+
+      - run: npm run-script lint
+      - run: npm test
+        env:
+          CI: true
