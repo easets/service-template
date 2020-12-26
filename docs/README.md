@@ -27,6 +27,7 @@ In particular, the following template variables were used:
 - company: the name of the company
 
 The following script should be launch to init the repository with the proper naming:
+
 ```
 $ node template {{name}} {{company}} 
 ```
@@ -36,6 +37,8 @@ $ node template ease-booking easets
 ```
 
 A default favicon can be setup as well by putting a file named `favicon.ico` at the root of the project.
+
+You should then update the package.json with values as you see fit
 
 ## Dev Dependencies
 
