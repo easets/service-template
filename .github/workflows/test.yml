@@ -1,4 +1,4 @@
-name: {{name}}-service CI
+name: service CI
 
 on:
   push:
