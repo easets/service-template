@@ -12,7 +12,7 @@ The following features are available:
 
 An extensive list can be found in the package.json file
 
-### Plugins
+### Fastify plugins
 
 The following features were bundled as plugins and can be found in the plugins folder
 - caching
@@ -49,6 +49,9 @@ Notes: During a rebase you may want to skip all hooks, you can use HUSKY_SKIP_HO
 ```
 $ HUSKY_SKIP_HOOKS=1 git rebase ...
 ```
+
+NB: Some issues could appears with versions of node and NPM.
+Please either update to the latest available version of have a look at [husky issues](https://github.com/typicode/husky/issues)
 
 ### MongoDb ( using docker-compose)
 

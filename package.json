@@ -1,7 +1,7 @@
 {
   "name": "{{name}}-service",
   "version": "1.0.0",
-  "description": "",
+  "description": "Template repository for fastify microservice",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -33,7 +33,6 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "eslint-plugin-jest": "^24.0.2",
     "fast-json-stable-stringify": "^2.1.0",
     "fastify": "^3.5.0",
     "fastify-bcrypt": "^0.1.0",
@@ -61,9 +60,16 @@
     "eslint": "^7.10.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.0.2",
     "husky": "^4.3.6",
     "jest": "^26.4.2",
     "jest-config": "^26.4.2",
     "replace-in-file": "^6.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run-script lint-fix && npm run-script lint",
+      "pre-push": "npm test"
+    }
   }
 }
