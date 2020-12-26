@@ -29,7 +29,7 @@ In particular, the following template variables were used:
 The following script should be launch to init the repository with the proper naming:
 
 ```
-$ node template {{name}} {{company}} 
+$ node template.js {{name}} {{company}} 
 ```
 E.g. 
 ```
