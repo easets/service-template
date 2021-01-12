@@ -5,5 +5,5 @@ const ConfigurationError = createError('ConfigurationError', '%s', 500);
 
 module.exports = {
     NotAuthorized,
-    ConfigurationError
+    ConfigurationError,
 };
