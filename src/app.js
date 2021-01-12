@@ -46,7 +46,7 @@ const build = async function builder() {
 
     await fastify.register(authenticate);
     await fastify.register(cacheHelper);
-    fastify.register(favicon, { path: './' });
+    fastify.register(favicon);
 
     fastify.register(cors, {
         origin: '*',
