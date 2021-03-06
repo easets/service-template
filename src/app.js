@@ -6,6 +6,7 @@ const cookie = require('fastify-cookie');
 const axios = require('axios');
 const cors = require('fastify-cors');
 const bcryptLib = require('fastify-bcrypt');
+const { readFileSync } = require('fs');
 const jwtLib = require('fastify-jwt');
 const favicon = require('fastify-favicon');
 const healthCheck = require('fastify-healthcheck');
@@ -26,7 +27,11 @@ const build = async function builder() {
 
     // add middleware
     await fastify.register(jwtLib, {
-        secret: config.cookieSecret,
+        secret: {
+            private: readFileSync('.cert/jwtRS256.key.pub', 'utf8'),
+            public: readFileSync('.cert/jwtRS256.key.pub', 'utf8'),
+        },
+        sign: { algorithm: 'RS256' },
     });
 
     fastify.register(cookie, {
