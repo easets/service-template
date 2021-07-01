@@ -9,6 +9,7 @@ const companyName = process.argv[3] || serviceName;
 if (serviceName) {
     const files = ['.github/workflows/test.yml',
         '.env.*',
+        'src/helpers/config.js',
         'src/routes/swagger/index.js',
         'dev/docker-compose.yml',
         'package*.json',
